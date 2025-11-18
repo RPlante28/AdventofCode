@@ -18,6 +18,20 @@ listTwo = sorted(listTwo)
 for i in range(len(listOne)):
     total += abs(listOne[i] - listTwo[i])
 
+# part one
 print(total)
 
 # want to go back and see if I can optimize
+
+# part two
+similarity = 0
+count = 0
+
+for i in range(len(listOne)):
+    count = 0
+    for j in range(len(listTwo)):
+        if listOne[i] == listTwo[j]:
+            count += 1
+    similarity += listOne[i] * count
+
+print(similarity)
